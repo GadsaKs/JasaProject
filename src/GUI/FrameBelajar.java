@@ -194,8 +194,10 @@ public class FrameBelajar extends javax.swing.JFrame {
                  JOptionPane.showMessageDialog(this, "Silahkan cari data terlebih dahulu");
                  txtnpm.requestFocus();
              } else {
-                 CRUD.ubahPengguna(txtnpm, tempNama, tempTelpon);
+                 CRUD.ubahPengguna(txtnpm.getText(), txtnama.getText(), txttelpon.getText());
+                 JOptionPane.showMessageDialog(this, "Data Berhasil diubah");
              }
+             
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
