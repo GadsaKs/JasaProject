@@ -113,4 +113,41 @@ public class Koneksi {
                 }
                 
         }
+                public void ubahPengguna(int tempNpm, String tempNama, String tempTelpon) {
+            
+                try {
+                    
+                    String sql = "update user set nama = ?, telpon = ? where id = ?";
+                    PreparedStatement perintah = koneksidb.prepareStatement(sql);
+                    perintah.setInt(1, tempNpm);
+                    perintah.setString(2, tempNama);
+                    perintah.setString(3, tempTelpon);
+                    perintah.executeUpdate();
+                    System.out.println("Data berhasil disimpan");
+                    
+                } catch (Exception e) {
+                    
+                    System.out.println(e.getMessage());
+                    
+                }
+                
+        }
+                
+                public void hapusBelajar(int tempNpm) {
+            
+                try {
+                    
+                    String sql = "delete from user where id = ?";
+                    PreparedStatement perintah = koneksidb.prepareStatement(sql);
+                    perintah.setInt(1, tempNpm);
+                    perintah.executeUpdate();
+                    System.out.println("Data berhasil dihapus");
+                    
+                } catch (Exception e) {
+                    
+                    System.out.println(e.getMessage());
+                    
+                }
+                
+        }
 }

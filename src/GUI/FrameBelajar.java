@@ -183,6 +183,21 @@ public class FrameBelajar extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         try {
+            
+             if (
+                     txtnpm.getText().equals("") &&
+                     txtnama.getText().equals("") &&
+                     txttelpon.getText().equals("")
+                     )
+             {
+                 JOptionPane.showMessageDialog(this, "Silahkan cari data terlebih dahulu");
+                 txtnpm.requestFocus();
+             } else {
+                 CRUD.ubahPengguna(txtnpm, tempNama, tempTelpon);
+             }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -199,6 +214,23 @@ public class FrameBelajar extends javax.swing.JFrame {
 
     private void txtnpmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnpmKeyPressed
         // TODO add your handling code here:
+        
+        try {
+            
+            if(txtnpm.getText().equals("")){
+                JOptionPane.showMessageDialog(this, "NPM belum diisi");
+                txtnpm.requestFocus();
+            } else if (txtnama.getText().equals("")) {
+                JOptionPane.showMessageDialog(this, "Nama belum diisi");
+            } else if (txttelpon.getText().equals("")){
+            JOptionPane.showMessageDialog(this, "");
+            txttelpon.requestFocus();
+        } else {
+                CRUD.simpanBelajar(txtnpm.getHeight(), txtnama.getText(), txttelpon.getText());
+                JOptionPane.showMessageDialog(this, "Data Berhasil disimpan");
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_txtnpmKeyPressed
 
     /**
