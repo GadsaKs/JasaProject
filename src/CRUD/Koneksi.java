@@ -93,4 +93,24 @@ public class Koneksi {
                 }
                 
         }
+                
+                public void simpanBelajar(int tempId, String tempName, String tempTelpon) {
+            
+                try {
+                    
+                    String sql = "insert into belajar (id, name,  telpon) values (?,?,?)";
+                    PreparedStatement perintah = koneksidb.prepareStatement(sql);
+                    perintah.setInt(1, tempId);
+                    perintah.setString(2, tempName);
+                    perintah.setString(3, tempTelpon);
+                    perintah.executeUpdate();
+                    System.out.println("Data berhasil disimpan");
+                    
+                } catch (Exception e) {
+                    
+                    System.out.println(e.getMessage());
+                    
+                }
+                
+        }
 }
