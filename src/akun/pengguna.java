@@ -5,7 +5,7 @@
 package akun;
 
 import services.*;
-import GUI.Mainframe;
+import GUI.FrameUtama;
 import java.util.Scanner;
 import CRUD.Koneksi;
 
@@ -17,7 +17,7 @@ public class pengguna {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        new Mainframe().setVisible(true);
+        new FrameUtama().setVisible(true);
         
 //        koneksi ke db
 //        Koneksi crud = new Koneksi();
