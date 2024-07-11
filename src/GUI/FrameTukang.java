@@ -4,7 +4,7 @@
  */
 package GUI;
 
-import CRUD.Koneksi;
+import CRUD.*;
 import javax.swing.JOptionPane;
 import java.sql.Statement;
 import java.sql.ResultSet;

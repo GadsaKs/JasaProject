@@ -12,7 +12,7 @@ import java.sql.PreparedStatement;
  * @author gadsa
  */
 public class Koneksi {
-    private String databasename = "2210010200_gadsa_khalimatus_sadiah";
+    private String databasename = "db_jasa";
     private String username = "root";
     private String password = "";
     private String lokasi = "jdbc:mysql://localhost/"+databasename;
